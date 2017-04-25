@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> formulaire </title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+
+    <h1> Formulaire de support technique Hackers Poulette </h1>
+
+    <form method="post" action="traitement.php">
+
+     <fieldset>
+      <legend> Vos coordonnées d'identification </legend>
+
+      <p>
+        <label for="nom">Votre nom de famille :</label>
+        <input type="text" name="nom" id="nom" placeholder="Mettez votre nom ici s'il vous plait" size="30" maxlength="20" autofocus required aria-required="true"/>
+      </p>
+
+      <p>
+        <label for="prenom">Votre prénom :</label>
+        <input type="text" name="prenom" id="prenom" placeholder="ex: Gertrude, Frénégonde, Hypolite, Jean-Gustave" size="40" maxlength="20" required aria-required="true"/>
+      </p>
+
+      <p>
+        <label for="email">Votre email :</label>
+        <input type="email" placeholder="ex:gertrude@hotmail.com" required aria-required="true"/>
+      </p>
+
+      <p>
+      <label for="pays">Dans quel pays habitez-vous ?</label><br />
+      <select name="pays" id="pays" required>
+          <option value="Belgique" selected>Belgique</option>
+          <option value="espagne">Espagne</option>
+          <option value="italie">Italie</option>
+          <option value="royaume-uni">Royaume-Uni</option>
+          <option value="canada">Canada</option>
+          <option value="etats-unis">États-Unis</option>
+          <option value="chine">Chine</option>
+          <option value="japon">Japon</option>
+      </select>
+      </p>
+
+      <p>
+       <label for="sexe">A qui ai-je l'honneur? Monsieur? Madame ? </label>
+
+       <input type="radio" name="sexe" value="feminin" id="feminin" required aria-required="true"/> <label for="feminin">F</label>
+       <input type="radio" name="sexe" value="masculin" id="masculin" required aria-required="true"/> <label for="masculin">M</label>
+       <input type="radio" name="sexe" value="indefini" id="indefini" required aria-required="true"/> <label for="indefini">X</label>
+     </p>
+
+  </fieldset>
+
+  <fieldset>
+     <legend> Objet du problème et donc, de la prise de contact </legend>
+
+     <p>
+       <label for="message">
+         Quel est votre problème qu'on prendra en charge avec plaisir :) ?
+       </label>
+       <br />
+       <textarea name="message" id="message" rows="10" cols="50" required aria-required="true">
+       Bonjour cher Hackers Poulette,
+       Je rencontre un problème avec...
+       </textarea>
+     </p>
+
+     <p>
+     <label for="sujet"> A propos de quel sujet(s) vous nous contactez ? </label> <br/>
+
+         <input type="checkbox" name="sujet" value="kir">Kit</input> <br/>
+         <input type="checkbox" name="sujet" value="accessoires">accessoire</input> <br/>
+         <input type="checkbox" name="sujet" value="autres">Autre(s)</input> <input type="text" name="sujet" value=""> <br/>
+     </p>
+
+  </fieldset>
+
+  <input type="submit" value="C'est bon, tout y est? Vous avez posé toutes vos questions? Envoyez !" />
+
+    </form>
+  </body>
+</html>
