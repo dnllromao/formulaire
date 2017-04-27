@@ -3,7 +3,8 @@
 	//echo "<pre>".print_r($_SERVER,true)."</pre>";
 	echo "<pre>".print_r($_POST,true)."</pre>";
 
-	function test_input($data) {
+	function clean_data($data) {
+		//sanitization
 		$data = trim($data); // Strip whitespace
 		$data = stripslashes($data); // Remove the backslash
 		$data = htmlspecialchars($data); // Convert special characters to HTML entities
@@ -12,13 +13,22 @@
 
 	foreach ($_POST as $key => $value) {
 
-		//var_dump(input_test($_POST[$key]));
-		$key = (isset($_POST[$key])) ? test_input($_POST[$key]) : '';
-		echo $key;
-		
+		${$key} = (isset($_POST[$key])) ? clean_data($_POST[$key]) : empty_data($key);
+
 	}
 
+	echo $nom;
+	echo $prenom;
+	echo $email;
 
+	//validation
+	$email  = filter_var($email, FILTER_VALIDATE_EMAIL);
 
-	//sanitization
+	//send mail
+	$suject = "Confirmation de votre demande";
+	$message = 'Bonjour ' . $nom . ', nous nous occupons de votre demande au plus vite.  Merci de nous avoir contacté.';
+	var_dump(mail($email, $suject, $message));
+
+ 	echo '<p class="alert confirm">Bonjour ' . $nom . ', nous nous occupons de votre demande au plus vite. <br/> Merci de nous avoir contacté.</p>';
+
 ?>
