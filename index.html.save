@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire de contact</title>
+  <link rel="stylesheet" href="css/foundation.css">
+</head>
+<body>
+
+  <main class="row">
+    <div class="medium-11 large-centered column">
+      <h1>Formulaire de contact</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam soluta quos vel praesentium, laudantium, a. Debitis odio magnam voluptates sunt nesciunt, at quos! Numquam non, necessitatibus, officiis aliquam provident laboriosam!</p>
+    </div>
+    
+    <!--<p class="alert">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, facere.</p>-->
+
+    <form action="#" method="get" class="medium-11 large-centered columns">
+       <fieldset class="fieldset">
+        <legend>Identifiants</legend>
+          <div class="row">
+            <div class="medium-6 columns">
+              <label for="nom">Nom*</label>
+              <input type="text" name="nom" id="nom" required aria-required="true">
+            </div>
+
+            
+            <div class="medium-6 columns">
+              <label for="prenom">Prénom*</label>
+              <input type="text" name="prenom" id="prenom" required aria-required="true">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="medium-6 columns end">
+              <label for="email">Email*</label>
+              <input type="email" name="email" id="email" required aria-required="true">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="medium-6 columns">
+              <label for="pays">Pays*</label>
+              <input list="pays" name="pays" required>
+                <datalist id="pays">
+                  <option value="Belgique">
+                  <option value="France">
+                </datalist>
+            </div>
+
+            <fieldset class="medium-6 columns">
+                <legend>Gender*</legend>
+                <input type="radio" value="m" name="genre" id="male" required aria-required="true"><label for="male">male</label>
+                <input type="radio" value="f" name="genre" id="female"><label for="female">female</label>
+                <input type="radio" value="x" name="genre" id="other"><label for="other">other</label>
+                <!--<input type="text">-->
+            </fieldset>
+          </div>
+       </fieldset>
+
+       <fieldset class="fieldset">
+        <legend>Votre message</legend>
+        <div>
+          <label for="subjet">Subject</label>
+          <select name="subjet" id="subjet">
+            <option value="kit">Kit</option>
+            <option value="acc">Accessoires</option>
+            <option value="aut" selected>Autre</option>
+          </select>
+
+          <label for="msg">Message*</label>
+          <textarea name="msg" id="msg" cols="30" rows="10" required aria-required="true"></textarea>
+        </div>
+       </fieldset>
+
+       <p class="help-text">* champ obligatoire</p>
+      
+       <button type="submit" class="button expand">Envoyer</button>
+    </form>
+  </main>
+</body>
+</html>
