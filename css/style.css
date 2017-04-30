@@ -8,6 +8,10 @@ body {
     color: #303030;
 }
 
+h1 {
+	font-size: 32px;
+}
+
 fieldset {
 	background-color:  #15c5bd;
 }
@@ -16,18 +20,12 @@ fieldset {
 	border-radius: 1000px;
 }
 
-button {
-	margin: auto;
-	width: 80%; 
-}
-.large-6.large-centered.row {
-	text-align: center
-}
-h1 {
-	font-size: 32px;
-	text-align: center;
+/*
+.row {
+	background-color: blue;
 }
 
-img {
-	img-align: center;
+.columns {
+	background-color: red;
 }
+*/
