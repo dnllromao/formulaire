@@ -21,7 +21,7 @@
       </div>
 
       <div class="content">
-        <form method="post" action="script.php">
+        <form method="get" action="script.php">
           <fieldset class="fieldset">
             <legend> Vos coordonnées d'identification </legend>
 
@@ -46,7 +46,7 @@
               </div>
               <div class="medium-6 columns">
                 <label>Dans quel pays habitez-vous ?
-                  <select required aria-required="true">
+                  <select name="pays" required aria-required="true">
                     <option value="">---</option>
                     <option value="Belgique" selected>Belgique</option>
                     <option value="espagne">Espagne</option>
@@ -84,7 +84,7 @@
               <div class="medium-12 columns">
                 <label>
                   Quel est votre problème qu'on prendra en charge avec plaisir :) 
-                  <textarea rows="10" cols="50" placeholder="Bonjour cher Hackers Poulette,&#10;Je rencontre un problème avec..." required aria-required="true"></textarea>
+                  <textarea name="message" rows="10" cols="50" placeholder="Bonjour cher Hackers Poulette,&#10;Je rencontre un problème avec..." required aria-required="true"></textarea>
                 </label>
               </div>
               
