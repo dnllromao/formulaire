@@ -20,6 +20,10 @@ fieldset {
 	border-radius: 1000px;
 }
 
+#touch {
+	display: none;
+}
+
 /*
 .row {
 	background-color: blue;

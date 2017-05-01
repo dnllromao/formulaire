@@ -3,6 +3,10 @@
 	//echo "<pre>".print_r($_SERVER,true)."</pre>";
 	//echo "<pre>".print_r($_GET,true)."</pre>";
 
+  if ($_GET['touch']) {
+    header("Location: index.html");
+  }
+
   const REQUIRED_FIELDS = array('nom', 'prenom', 'email', 'pays', 'sexe', 'message');
 
   $fields = array(
@@ -179,6 +183,7 @@
                   Quel est votre problème qu'on prendra en charge avec plaisir :) 
                   <textarea name="message" rows="10" cols="50" placeholder="Bonjour cher Hackers Poulette,&#10;Je rencontre un problème avec..." required aria-required="true"></textarea>
                 </label>
+                <input type="text" id="touch" name="touch">
               </div>
               
             </div>
