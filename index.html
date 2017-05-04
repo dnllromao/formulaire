@@ -19,7 +19,7 @@
       <div class="intro">
         <h1 class="text-center">Vous avez un problème ? On va vous aider ! <br/> Remplissez le formulaire d'Hackers Poulette !</h1>
       </div>
-
+<!-- On a oublié de afficher quelles sont les champs required -->
       <div class="content">
         <form method="get" action="script.php">
           <fieldset class="fieldset">
@@ -28,25 +28,28 @@
             <div class="row">
               <div class="medium-6 columns">
                 <label>Votre nom de famille :
-                  <input type="text"  name="nom" placeholder="Mettez votre nom ici s'il vous plait" required aria-required="true" autofocus/>
+                  <input type="text"  name="nom" placeholder="Mettez votre nom ici s'il vous plait"  autofocus/>
                 </label>
+                <p class="help-text hide" id="alert-nom">Hey, ne oubliez pas de remplir ce champ</p>
               </div>
               <div class="medium-6 columns">
                 <label>Votre prénom :
-                  <input type="text" name="prenom" placeholder="ex: Gertrude, Frénégonde, Hypolite, Jean-Gustave" required aria-required="true" />
+                  <input type="text" name="prenom" placeholder="ex: Gertrude, Frénégonde, Hypolite, Jean-Gustave"  />
                 </label>
+                <p class="help-text hide" id="alert-prenom">Hey, ne oubliez pas de remplir ce champ</p>
               </div>
             </div>
 
             <div class="row">
               <div class="medium-6 columns">
                 <label>Votre email :
-                  <input type="email" name="email" placeholder="ex:gertrude@hotmail.com" required aria-required="true" />
+                  <input type="email" name="email" placeholder="ex:gertrude@hotmail.com"  />
                 </label>
+                <p class="help-text hide" id="alert-email">Hey, ne oubliez pas de remplir ce champ</p>
               </div>
               <div class="medium-6 columns">
                 <label>Dans quel pays habitez-vous ?
-                  <select name="pays" required aria-required="true">
+                  <select name="pays" >
                     <option value="">---</option>
                     <option value="Belgique" selected>Belgique</option>
                     <option value="espagne">Espagne</option>
@@ -57,6 +60,7 @@
                     <option value="chine">Chine</option>
                     <option value="japon">Japon</option>
                   </select>
+                  <p class="help-text hide" id="alert-pays">Hey, ne oubliez pas de remplir ce champ</p>
                 </label>
               </div>
             </div>
@@ -64,9 +68,10 @@
             <div class="row">
               <fieldset class="medium-6 columns end">
                 <legend>A qui ai-je l'honneur? Monsieur? Madame ?</legend>
-                <input type="radio" name="sexe" value="feminin" id="feminin" required aria-required="true"><label for="feminin">F</label>
+                <input type="radio" name="sexe" value="feminin" id="feminin" ><label for="feminin">F</label>
                 <input type="radio" name="sexe" value="masculin" id="masculin"><label for="masculin">M</label>
                 <input type="radio" name="sexe" value="indefini" id="indefini"><label for="indefini">X</label>
+                <p class="help-text hide" id="alert-sexe">Hey, ne oubliez pas de remplir ce champ</p>
               </fieldset>
             </div>
           </fieldset>
@@ -84,8 +89,9 @@
               <div class="medium-12 columns">
                 <label>
                   Quel est votre problème qu'on prendra en charge avec plaisir :) 
-                  <textarea name="message" rows="10" cols="50" placeholder="Bonjour cher Hackers Poulette,&#10;Je rencontre un problème avec..." required aria-required="true"></textarea>
+                  <textarea name="message" rows="10" cols="50" placeholder="Bonjour cher Hackers Poulette,&#10;Je rencontre un problème avec..." ></textarea>
                 </label>
+                <p class="help-text hide" id="alert-message">Hey, ne oubliez pas de remplir ce champ</p>
                 <input type="text" id="touch" name="touch">
               </div>
               
@@ -103,5 +109,7 @@
 
 
   </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="js/script.js"></script> 
 </body>
 </html>
