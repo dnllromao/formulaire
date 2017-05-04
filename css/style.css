@@ -24,6 +24,10 @@ fieldset {
 	display: none;
 }
 
+.help-text {
+	color: red;
+}
+
 /*
 .row {
 	background-color: blue;

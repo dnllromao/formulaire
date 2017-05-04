@@ -3,6 +3,7 @@
 	//echo "<pre>".print_r($_SERVER,true)."</pre>";
 	//echo "<pre>".print_r($_GET,true)."</pre>";
 
+  /* honeypot tech */
   if ($_GET['touch']) {
     header("Location: index.html");
   }
@@ -23,6 +24,7 @@
 
 	function sanitization($data) {
 		$data = trim($data); // Strip whitespace
+    $data = strip_tags($data);
 		$data = stripslashes($data); // Remove the backslash
 		$data = htmlspecialchars($data); // Convert special characters to HTML entities
 		return $data;
@@ -39,7 +41,7 @@
 
   function send_mail ($to) {
     $suject = 'Confirmation de votre contact';
-    $message = 'Votre question nous est bien arrivé. Nous nous occupons au plus vite.Merci de nous avoir contacté';
+    $message = 'Votre question nous est bien arrivé. Nous nous occupons au plus vite. Merci de nous avoir contacté';
     return mail($to, $suject, $message);
   }
 
@@ -200,5 +202,7 @@
 
 
   </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="myscripts.js"></script> 
 </body>
 </html>
