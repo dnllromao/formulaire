@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function validate() {
 	/* scripts: 
 			nom: text
@@ -70,4 +71,5 @@ $(document).ready(function(){
 	});
 
 });    
+
 
