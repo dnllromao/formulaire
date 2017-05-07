@@ -27,15 +27,15 @@ function validate() {
 	console.log($('form').serialize()); */
 
 	$.each( fields , function (key, value) {
-		console.log(key);
-		console.log($( "input[name='"+key+"'], select[name='"+key+"'], textarea[name='"+key+"']").val());
+		//console.log(key);
+		//console.log($( "input[name='"+key+"'], select[name='"+key+"'], textarea[name='"+key+"']").val());
 		// ?? input radio gets a default value equal to first option
 		// $(selector).val().length ??
-		console.log($( "input[name='"+key+"'], select[name='"+key+"'], textarea[name='"+key+"']").val() == '' );
+		//console.log($( "input[name='"+key+"'], select[name='"+key+"'], textarea[name='"+key+"']").val() == '' );
 		var input = $( "input[name='"+key+"'], select[name='"+key+"'], textarea[name='"+key+"']");
 
 		if(input.val() == '' || input.val() == undefined) {
-			console.log(key);
+			//console.log(key);
 			$('#alert-'+key).removeClass('hide');
 		} else {
 			fields[key] = input.val()
@@ -43,7 +43,18 @@ function validate() {
 		}
 	});
 
-	console.log(fields);
+	//console.log(fields);
+
+	if (fields.email) {
+		var regex = /^[^A-Z]+@{1}[^A-Z]+\.[a-z]{3}$/;
+		console.log(fields.email.match(regex));
+		if (fields.email.match(regex)) {
+			$('#error-email').addClass('hide');
+		}else {
+			$('#error-email').removeClass('hide');
+		}
+
+	}
 
 
 
@@ -55,6 +66,8 @@ $(document).ready(function(){
 		e.preventDefault();
 		console.log(e);
 		validate();
+		/// S'il y a des erreus, afficher aussi panel & scrool to top 
 	});
 
 });    
+

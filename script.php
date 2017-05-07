@@ -206,3 +206,7 @@
    <script src="myscripts.js"></script> 
 </body>
 </html>
+
+<?php
+
+?>
