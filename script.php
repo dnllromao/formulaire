@@ -2,6 +2,11 @@
 	//phpinfo();
 	//echo "<pre>".print_r($_SERVER,true)."</pre>";
 	//echo "<pre>".print_r($_GET,true)."</pre>";
+  //var_dump($_SERVER);
+
+  // if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && ($_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest')) {
+  //     // this is ajax request, do something
+  // }
 
   /* honeypot tech */
   if ($_GET['touch']) {
@@ -80,6 +85,7 @@
   else {
     // envoyer email
     $is_sent = send_mail($fields['email']);
+    var_dump($is_sent);
     if($is_sent) {
       $class = 'success';
       $msg = 'Votre demande a été bien enregistrer et un email de confirmation vous a été envoyé.<br/>Nous nous en occupons au plus vite. Merci de nous avoir contacté.';
@@ -92,9 +98,11 @@
     
   }
 
+  var_dump($msg);
+
 ?>
 
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
 <head>
   <title> formulaire </title>
