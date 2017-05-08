@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 @font-face {
     font-family: myFirstFont;
     src: url(../font/Bellota-Regular.otf);
 }
 
 body {
-    font-family: myFirstFont;
+   font-family: myFirstFont, Helvetica, sans-serif;
     color: #303030;
 }
 
