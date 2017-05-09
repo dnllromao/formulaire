@@ -19,8 +19,8 @@ function validation() {
 	$('[required]').each(function(index, el) {
 
 		var key = $(el).attr('name');
-		console.log(key);
-		console.log(is_empty(el));
+		// console.log(key);
+		// console.log(is_empty(el));
 		if(is_empty(el)) {
 			$('#alert-'+key).removeClass('hide');
 			submit = false; // prevent this var to me set multiple times
