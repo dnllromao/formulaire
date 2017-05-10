@@ -53,19 +53,20 @@ $(document).ready(function(){
 
 	$('form').submit(function(e) {
 		e.preventDefault();
+		$('.callout').remove();
 
 		if (validation()) {
 
 			$.ajax({
 				url: 'script.php',
 				//type: 'default GET (Other values: POST)',
-				//dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
+				dataType: 'json',
 				data: $('form').serialize(),
 			})
 			.done(function(d) {
 				console.log(d);
 				console.log("success");
-				$('.content').prepend(d);
+				$('.content').prepend(d.msg);
 
 				// snnipet to clear all inputs after submit
 				$('form').each(function() {
