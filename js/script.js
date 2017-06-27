@@ -56,7 +56,7 @@ $(document).ready(function(){
 		$('.callout').remove();
 
 		if (validation()) {
-
+			console.log($('form').serialize());
 			$.ajax({
 				url: 'script.php',
 				//type: 'default GET (Other values: POST)',

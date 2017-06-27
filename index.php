@@ -1,3 +1,6 @@
+<?php 
+  require('twitter.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
