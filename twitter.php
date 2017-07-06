@@ -2,10 +2,10 @@
 session_start();
 // Orginal Twiter API PHP https://github.com/pedroventura/pv-auto-tweets
 // Twitter API PHP examples https://github.com/fxstar/auto-tweets-php-api
-$consumerKey    = 'wV01D7WvfQlI282AqMnaR2Kms';
-$consumerSecret = 'eM9JAhP8aLvD2BvFC9RhOGOOR9sbGnTLlhPgFYmy8Mmi9RBujc';
-$oAuthToken     = '765769958-RX5AgXMtqAy7C6Ew9f1R27TX3qEvFVXphB2Mbd0Z';
-$oAuthSecret    = 'HXeEJLypqOlcqsp1u6Clf2LdhyOLjXV0iFIOzkSGYiSdA';
+$consumerKey    = '';
+$consumerSecret = '';
+$oAuthToken     = '';
+$oAuthSecret    = '';
 $oauthCallback = 'https://localhost:80/projects/projet-1-formulaire/';
 # API OAuth
 
